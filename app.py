@@ -27,7 +27,7 @@ def fgtpsw():
         data=(password,username)
         mycursor.execute(query,data)
         connection.commit()
-        return render_template('/index.html',msg='Password changed successfully!')
+    return render_template('/forgotpswd.html',msg='Password changed successfully!')
 
             
 @app.route('/about')
