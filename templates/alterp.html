@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Property.com</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <div class="header">
+      
+        <center>
+          <h1>Property.com - Buy or Sell your properties</h1>
+          <br>
+          <h2>Ravipuram Road, Ernakulam South</h2>
+        </center>
+     </div>
+</head>
+<body>
+    <br>
+    <center>
+        <div class="head-tag">
+        <a href="/backadminhome"><strong>Back-Home</strong></a>
+        </div>
+    </center>
+    <br>
+    <center>
+       
+    <form action="/alterp" method="post">   
+    <center>
+    <br>
+    {{msg}}
+    <br>
+    <br>
+     <table>
+        {% for i in sqldata %}
+        <tr>
+            <td><label for="Id">Id</label></td>        
+            <td><input type="text" name="Id" value={{i[0]}}></td>
+           
+        </tr>
+       <tr>
+            <td><label for="LotArea">Lot Size in square feet</label></td>        
+            <td><input type="text" name="LotArea" value={{i[3]}}></td>
+           
+        </tr>
+        {% endfor %}
+      </table>
+      <button>Update</button>
+      <br>
+    </center>
+   
+     </form>
+     
+    </div>
+</center>
+</body>
+</html>

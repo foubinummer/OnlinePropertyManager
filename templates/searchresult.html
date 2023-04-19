@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Property.com </title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <div class="header">
+      
+        <center>
+          <h1>Property.com - <i>Buy or Sell your properties</i></h1>
+          <br>
+          <h2>Ravipuram Road, Ernakulam South</h2>
+        </center>
+     </div>
+</head>
+<body>
+    <br>
+        <br>
+    <center>
+      <div class="head-tag">
+      <a href="/backadminhome"><strong>Back - Admin Home</strong></a>
+      <a href="/searchp"><strong>Search Property</strong></a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <table border="1px">
+        <thead>
+            <tr>
+                <th>SL No</th>         
+                <th>MSSubClass</th>     
+                <th>MSZoning</th>
+                <th>LotArea</th>         
+                <th>LotShape</th>     
+                <th>Utilities</th>
+                <th>LandSlope</th>
+                <th>Neighborhood</th>
+                <th>BldgType</th>
+                <th>HouseStyle</th>
+                <th>YearBuilt</th>
+                <th>RoofStyle</th>
+                <th>Electrical</th>
+                <th>FF Sqft</th>   
+                <th>SF Sqft</th>
+                <th>SalePrice</th>  
+
+           </tr>
+        </thead>
+        <tbody>
+            {% for i in sqldata %}
+              <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[5]}}</td>
+                <td>{{i[7]}}</td>
+                <td>{{i[9]}}</td>
+                <td>{{i[10]}}</td>
+                <td>{{i[13]}}</td>
+                <td>{{i[14]}}</td>
+                <td>{{i[17]}}</td>
+                <td>{{i[18]}}</td>
+                <td>{{i[28]}}</td>
+                <td>{{i[29]}}</td>
+                <td>{{i[30]}}</td>
+                <td>{{i[31]}}</td>
+                                    
+              </tr>
+            {% endfor %}
+        </tbody>
+                
+    </table>
+                     
+         </table>
+      
+     </center>
+     </body>
+     </html>
